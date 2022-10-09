@@ -1,0 +1,171 @@
+<!-- User Story #1: I can see a title with id="title" in H1 sized text.
+
+User Story #2: I can see a short explanation with id="description" in P sized text.
+
+User Story #3: I can see a form with id="survey-form".
+
+User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+
+User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+
+User Story #7: Inside the form, I can enter a number in a field with id="number".
+
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+
+User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+
+User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+
+User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+
+User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+
+User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+
+User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Survey Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<main id="container">
+		<div class="image-container">
+			<div class="img-c">
+				<img src="img/student.png" alt="">
+			</div>
+				<h1 id="title">Students Survey</h1>
+				<p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia harum quibusdam accusantium ipsum odit atque iste magnam odio voluptatibus delectus maxime tenetur libero, repudiandae cupiditate nam esse repellat dignissimos ex.</p>
+		</div>
+
+		<div class="survey-container">
+			<div class="header">
+				<div class="question">
+					<p><b>Please fill with your details</b></p>
+				</div>
+			</div>
+			<div class="survey-c">
+				<form id="survey-form">
+					<label for="name" id="name-label"> Your Name :</label>
+						<input 
+							type="text"
+					        name="name"
+					        class="form-control"
+					        id="name"
+					        placeholder="Name"
+					        required
+	        			>
+        			<label for="email" id="email-label"> Email :</label>
+        			<input 
+        				type="email"
+        				name="email"
+        				class="form-control" 
+				        id="email"
+        				placeholder="Email" 
+        				required="" 
+        			>
+        			<label for="number" id="number-label"> Umur :</label>
+        			<input 
+        				type="number"
+        				name="age"
+        				width="100px"
+        				min="6"
+        				max="18" 
+        				class="form-control" 
+        				id="number"
+        				placeholder="Age"
+        			>
+        			<label for="" >Your Class :
+        				<div class="group-form">
+		        			<select name="" id="dropdown" class="form-control">
+		        				<option value="">SD & Sederajat</option>
+		        				<option value="">SMP & Sederajat</option>
+		        				<option value="">SMA</option>
+		        				<option value="">SMK</option>
+		        			</select>
+		        			<input type="text" placeholder="Class" class="form-control">
+	        			</div>
+	        		</label>
+        			<label for="number" id="number-label"> School Name :</label>
+        			<input 
+        				type="text"
+        				name="lastname"
+        				class="form-control" 
+        				placeholder="School" 
+        			>
+        			<div class="form-check">
+        			<p>Your opinion About Studying at Home?</p>
+        				<label>
+        					<input name="student-opinion" value="A" type="radio" class="input-radio" checked/>Very Nice
+        				</label>
+						<label>
+        					<input name="student-opinion" value="B" type="radio" class="input-radio"/>This doesn't Change
+        				</label>
+        				<label>
+        					<input name="student-opinion" value="C" type="radio" class="input-radio"/>Is Really boring
+        				</label>
+        				<label>
+        					<input name="student-opinion" value="D" type="radio" class="input-radio"/>I'm Back in School soon
+        				</label>
+        			</div>
+        			<div class="form-check">
+        				<p>Problems experienced when studying from home?</p>
+        				<label>
+        					<input name="student-opinion" value="A" type="checkbox" class="input-checkbox" checked />Internet
+        				</label>
+						<label>
+        					<input name="student-opinion" value="B" type="checkbox" class="input-checkbox"/>No signal
+        				</label>
+        				<label>
+        					<input name="student-opinion" value="C" type="checkbox" class="input-checkbox"/>The device is bad 
+        				</label>
+        				<label>
+        					<input name="student-opinion" value="D" type="checkbox" class="input-checkbox"/>Do not have a Smartphone
+        				</label>
+        				<label>
+        					<input name="student-opinion" value="A" type="checkbox" class="input-checkbox"/>Couldn't Understand Learning
+        				</label>
+						<label>
+        					<input name="student-opinion" value="B" type="checkbox" class="input-checkbox"/>Other
+        				</label>
+
+        				<p>Your hope for this online learning?</p>
+        				<textarea
+					        id="comments"
+					        class="input-textarea"
+					        name="comment"
+					        placeholder="Enter your comment here..."
+					     ></textarea>
+        			</div>
+				<div class="submit">
+					<button type="submit" id="submit" class="submit-button">Submit</button>
+				</div>
+				</form>
+			</div>
+
+		</div>
+
+		<div class="popup">
+			<button class="close-btn">x</button>
+			<div class="popup-c">
+				<img src="img/email.png">
+				<h1>THANKS YOU!</h1>
+					<p>We will immediately accept the survey that you enter and reply, thank you for filling it in.</p>
+			</div>
+		</div>
+	</main>
+	
+
+<script src="script.js"></script>
+</body>
+</html>
